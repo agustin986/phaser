@@ -8,8 +8,8 @@
     <script>
     var config = {
         type: Phaser.AUTO,
-        width: 1480,
-        height: 727,
+        width: 880,
+        height: 580,
         physics: {
             default: 'arcade',
             arcade: {
@@ -27,19 +27,19 @@
     function preload ()
     {
 
-        // this.load.image('sky', 'assets/skies/space3.png');
+        this.load.image('sky', 'images/mihoyo.png');
         this.load.image('logo', 'images/hutao.png');
-        // this.load.image('red', 'assets/particles/red.png');
+        this.load.image('red', 'images/team.png');
     }
 
     function create ()
     {
-        this.add.image(400, 300, 'sky');
+        this.add.image(200, 300, 'sky');
 
         var particles = this.add.particles('red');
 
         var emitter = particles.createEmitter({
-            speed: 100,
+            speed: 300,
             scale: { start: 1, end: 0 },
             blendMode: 'ADD'
         });
