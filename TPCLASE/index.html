@@ -34,19 +34,19 @@
 
     function create ()
     {
-        this.add.image(200, 300, 'sky');
+        this.add.image(300, 300, 'sky');
 
         var particles = this.add.particles('red');
 
         var emitter = particles.createEmitter({
-            speed: 300,
-            scale: { start: 1, end: 0 },
+            speed: 15,
+            scale: { start: 4, end: 0 },
             blendMode: 'ADD'
         });
 
-        var logo = this.physics.add.image(400, 100, 'logo');
+        var logo = this.physics.add.image(200, 100, 'logo');
 
-        logo.setVelocity(100, 200);
+        logo.setVelocity(50, 100);
         logo.setBounce(1, 1);
         logo.setCollideWorldBounds(true);
 
